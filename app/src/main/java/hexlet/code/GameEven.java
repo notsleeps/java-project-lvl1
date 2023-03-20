@@ -30,6 +30,7 @@ public class GameEven {
                 System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was 'no'.\n"
                         + "Let's try again, " + userName);
                 break; }
+
             if (sum > 2) {
                 System.out.println("Congratulations," + userName + "!");
             }
