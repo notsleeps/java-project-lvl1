@@ -1,5 +1,6 @@
 package hexlet.code;
 import hexlet.code.games.Calculator;
+import hexlet.code.games.GCD;
 import hexlet.code.games.GameEven;
 import java.util.Scanner;
 
@@ -24,6 +25,8 @@ public class Engine {
                 break;
             case (3):
                 Calculator.calc();
+            case (4):
+                GCD.gcd();
             default:
                 break;
         }
@@ -54,7 +57,7 @@ public class Engine {
     }
 
     public static int randomNumber() {
-        return (int) (Math.random() * 10);
+        return (int) (Math.random() * 100);
     }
 }
 
