@@ -1,7 +1,7 @@
 package hexlet.code.games;
 
 import static hexlet.code.Engine.scanner;
-import static hexlet.code.Engine.randomNumber;
+import static hexlet.code.Engine.randomNumber100;
 import static hexlet.code.Engine.greeting;
 import static hexlet.code.Engine.result;
 import static hexlet.code.Engine.userResult;
@@ -14,8 +14,8 @@ public class GCD {
         greeting();
         System.out.println("Find the greatest common divisor of given numbers.");
         for (int i = 0; i < 3; i++) {
-            int num1 = randomNumber();
-            int num2 = randomNumber();
+            int num1 = randomNumber100();
+            int num2 = randomNumber100();
             System.out.println("Question: " + num1 + " " + num2);
             for (int j = num1; j > 0; j--) {
                 if (num1 % j == 0 & num2 % j == 0) {

@@ -1,9 +1,11 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
-import static hexlet.code.Engine.userName;
 import static hexlet.code.Engine.scanner;
-import static hexlet.code.Engine.randomNumber;
+import static hexlet.code.Engine.randomNumber100;
 import static hexlet.code.Engine.rightResult;
+import static hexlet.code.Engine.wrongResultStringYes;
+import static hexlet.code.Engine.wrongResultStringNo;
+import static hexlet.code.Engine.userAnswer;
 public class GameEven {
 
 
@@ -14,18 +16,16 @@ public class GameEven {
         System.out.println("Answer 'yes' if number even otherwise answer 'no'.");
 
         for (int i = 0; i < 3; i++) {
-            int num = randomNumber();
+            int num = randomNumber100();
             System.out.println("Question: " + num);
-            String answer = scanner.next();
-            if ((num % 2 == 0 & answer.equals(yes)) || (num % 2 != 0 & answer.equals(no))) {
+            userAnswer = scanner.next();
+            if ((num % 2 == 0 & userAnswer.equals(yes)) || (num % 2 != 0 & userAnswer.equals(no))) {
                 rightResult();
-            } else if (num % 2 == 0 & !answer.equals(yes)) {
-                System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was 'yes'.\n"
-                        + "Let's try again, " + userName);
+            } else if (num % 2 == 0 & !userAnswer.equals(yes)) {
+                wrongResultStringYes();
                 break;
-            } else if (num % 2 != 0 & !answer.equals(no)) {
-                System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was 'no'.\n"
-                        + "Let's try again, " + userName);
+            } else {
+                wrongResultStringNo();
                 break;
             }
         }

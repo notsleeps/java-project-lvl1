@@ -1,7 +1,6 @@
 package hexlet.code;
 import static hexlet.code.Engine.scanner;
 public class App {
-
     public static void main(String[] args) {
         System.out.println("""
                 Please enter the game number and press Enter.
@@ -9,6 +8,8 @@ public class App {
                 2 - Even
                 3 - Calc
                 4 - GCD
+                5 - Progression
+                6 - Prime
                 0 - Exit""");
         int number = Integer.parseInt(scanner.next());
         Engine.menu(number);
