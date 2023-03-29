@@ -13,7 +13,7 @@ public class GameEven {
         String yes = "yes";
         String no = "no";
         Engine.greeting();
-        System.out.println("Answer 'yes' if number even otherwise answer 'no'.");
+        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
         for (int i = 0; i < 3; i++) {
             int num = randomNumber100();
@@ -29,5 +29,9 @@ public class GameEven {
                 break;
             }
         }
+    }
+
+    public static void main(String[] args) {
+        even();
     }
 }
