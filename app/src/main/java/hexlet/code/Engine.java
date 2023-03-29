@@ -45,23 +45,23 @@ public class Engine {
         System.out.println("Correct!");
         round++;
         if (round == 3) {
-            System.out.println("Congratulations, " + userName);
+            System.out.println("Congratulations, " + userName + "!");
         }
     }
 
     public static void wrongResult() {
         System.out.println("'" + userResult + "'" + " is wrong answer ;(. Correct answer was "
-                + "'" + result + "'" + " Let's try again, " + userName);
+                + "'" + result + "'" + " Let's try again, " + userName + "!");
     }
 
     public static void wrongResultStringYes() {
         System.out.println("'" + userAnswer + "'" + " is wrong answer ;(. Correct answer was 'yes'.\n"
-                + "Let's try again, " + userName);
+                + "Let's try again, " + userName + "!");
     }
 
     public static void wrongResultStringNo() {
         System.out.println("'" + userAnswer + "'" + " is wrong answer ;(. Correct answer was 'no'.\n"
-                + "Let's try again, " + userName);
+                + "Let's try again, " + userName + "!");
     }
 
     public static void greeting() {
