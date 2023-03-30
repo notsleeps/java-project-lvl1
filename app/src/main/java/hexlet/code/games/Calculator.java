@@ -11,6 +11,7 @@ public class Calculator {
 
     public static void calc() {
         greeting();
+        System.out.println("What is the result of the expression?");
 
         for (int i = 0; i < 3; i++) {
             int num1 = randomNumber100();
@@ -18,7 +19,7 @@ public class Calculator {
             int symbol = (int) (Math.random() * 3);
             if (symbol == 0) {
                 result = num1 * num2;
-                System.out.println(num1 + " * " + num2);
+                System.out.println("Question: " + num1 + " * " + num2);
                 userResult = Integer.parseInt(scanner.next());
                 if (result == userResult) {
                     rightResult();
@@ -28,7 +29,7 @@ public class Calculator {
                 }
             } else if (symbol == 1) {
                 result = num1 - num2;
-                System.out.println(num1 + " - " + num2);
+                System.out.println("Question: " + num1 + " - " + num2);
                 userResult = Integer.parseInt(scanner.next());
                 if (result == userResult) {
                     rightResult();
@@ -38,7 +39,7 @@ public class Calculator {
                 }
             } else {
                 result = num1 + num2;
-                System.out.println(num1 + " + " + num2);
+                System.out.println("Question: " + num1 + " + " + num2);
                 userResult = Integer.parseInt(scanner.next());
                 if (result == userResult) {
                     rightResult();

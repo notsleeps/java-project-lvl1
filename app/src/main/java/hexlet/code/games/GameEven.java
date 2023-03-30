@@ -30,8 +30,4 @@ public class GameEven {
             }
         }
     }
-
-    public static void main(String[] args) {
-        even();
-    }
 }
