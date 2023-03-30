@@ -1,5 +1,5 @@
 package hexlet.code;
-import static hexlet.code.Engine.scanner;
+import static hexlet.code.Engine.getScanner;
 public class App {
     public static void main(String[] args) {
         System.out.println("""
@@ -11,7 +11,7 @@ public class App {
                 5 - Progression
                 6 - Prime
                 0 - Exit""");
-        int number = Integer.parseInt(scanner.next());
+        int number = Integer.parseInt(getScanner().next());
         Engine.menu(number);
     }
 }

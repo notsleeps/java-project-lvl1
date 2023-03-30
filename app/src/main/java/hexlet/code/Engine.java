@@ -7,14 +7,51 @@ import hexlet.code.games.Progression;
 import java.util.Scanner;
 
 public class Engine {
-    public static Scanner scanner = new Scanner(System.in);
-    public static String userName;
-    public static int userResult;
-    public static String userAnswer;
-    public static int result;
-    public static int round = 0;
+    private static Scanner scanner = new Scanner(System.in);
+    public static Scanner getScanner() {
+        return scanner;
+    }
+
+    private static String userName;
+    public static void setUserName(String str) {
+        userName = str;
+    }
+    public static String getUserName() {
+        return userName;
+    }
+    private static int userResult;
+    public static void setUserResult(int i) {
+        userResult = i;
+    }
+    public static int getUserResult() {
+        return userResult;
+    }
+
+    private static String userAnswer;
+    public static void setUserAnswer(String str) {
+        userAnswer = str;
+    }
+    public static String getUserAnswer() {
+        return userAnswer;
+    }
+    private static int result;
+    public static int getResult() {
+        return result;
+    }
+    public static void setResult( int i) {
+         result = i;
+    }
+
+
+    private static int round = 0;
+
+    public static int getMaxround() {
+        return 3;
+    }
+
 
     public static void menu(int num) {
+
         switch (num) {
             case (0):
                 break;
@@ -49,7 +86,7 @@ public class Engine {
         }
     }
 
-    public static void wrongResult() {
+    public static void wrongResultInt() {
         System.out.println("'" + userResult + "'" + " is wrong answer ;(. Correct answer was "
                 + "'" + result + "'" + " Let's try again, " + userName + "!");
     }

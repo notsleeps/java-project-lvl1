@@ -1,11 +1,5 @@
 package hexlet.code.games;
-import static hexlet.code.Engine.scanner;
-import static hexlet.code.Engine.randomNumber100;
-import static hexlet.code.Engine.greeting;
-import static hexlet.code.Engine.result;
-import static hexlet.code.Engine.userResult;
-import static hexlet.code.Engine.rightResult;
-import static hexlet.code.Engine.wrongResult;
+import static hexlet.code.Engine.*;
 
 public class Calculator {
 
@@ -13,38 +7,38 @@ public class Calculator {
         greeting();
         System.out.println("What is the result of the expression?");
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < getMaxround(); i++) {
             int num1 = randomNumber100();
             int num2 = randomNumber100();
             int symbol = (int) (Math.random() * 3);
             if (symbol == 0) {
-                result = num1 * num2;
+                setResult(num1 * num2);
                 System.out.println("Question: " + num1 + " * " + num2);
-                userResult = Integer.parseInt(scanner.next());
-                if (result == userResult) {
+                setUserResult(Integer.parseInt(getScanner().next()));
+                if (getResult() == getUserResult()) {
                     rightResult();
                 } else {
-                    wrongResult();
+                    wrongResultInt();
                     break;
                 }
             } else if (symbol == 1) {
-                result = num1 - num2;
+                setResult(num1 - num2);
                 System.out.println("Question: " + num1 + " - " + num2);
-                userResult = Integer.parseInt(scanner.next());
-                if (result == userResult) {
+                setUserResult(Integer.parseInt(getScanner().next()));
+                if (getResult() == getUserResult()) {
                     rightResult();
                 } else {
-                    wrongResult();
+                    wrongResultInt();
                     break;
                 }
             } else {
-                result = num1 + num2;
+                setResult(num1 + num2);
                 System.out.println("Question: " + num1 + " + " + num2);
-                userResult = Integer.parseInt(scanner.next());
-                if (result == userResult) {
+                setUserResult(Integer.parseInt(getScanner().next()));
+                if (getResult() == getUserResult()) {
                     rightResult();
                 } else {
-                    wrongResult();
+                    wrongResultInt();
                     break;
                 }
             }
