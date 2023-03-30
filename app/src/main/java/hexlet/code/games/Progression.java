@@ -1,7 +1,16 @@
 package hexlet.code.games;
-import static hexlet.code.Engine.*;
-public class Progression {
+import static hexlet.code.Engine.greeting;
+import static hexlet.code.Engine.randomNumber10;
+import static hexlet.code.Engine.rightResult;
+import static hexlet.code.Engine.getScanner;
+import static hexlet.code.Engine.getMaxround;
+import static hexlet.code.Engine.getResult;
+import static hexlet.code.Engine.setResult;
+import static hexlet.code.Engine.setUserResult;
+import static hexlet.code.Engine.getUserResult;
+import static hexlet.code.Engine.wrongResultInt;
 
+public class Progression {
     public static void progress() {
         greeting();
         System.out.println("What number is missing in the progression?");
@@ -28,8 +37,5 @@ public class Progression {
                 break;
             }
         }
-    }
-    public static void main(String[] args) {
-        progress();
     }
 }

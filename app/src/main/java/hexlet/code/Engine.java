@@ -38,39 +38,40 @@ public class Engine {
     public static int getResult() {
         return result;
     }
-    public static void setResult( int i) {
-         result = i;
+    public static void setResult(int i) {
+        result = i;
     }
 
 
     private static int round = 0;
 
     public static int getMaxround() {
-        return 3;
+        int maxround = 3;
+        return maxround;
     }
 
 
     public static void menu(int num) {
 
         switch (num) {
-            case (0):
+            case 0:
                 break;
-            case (1):
+            case 1:
                 Cli.greeting();
                 break;
-            case (2):
+            case 2:
                 GameEven.even();
                 break;
-            case (3):
+            case 3:
                 Calculator.calc();
                 break;
-            case (4):
+            case 4:
                 GCD.gcd();
                 break;
-            case (5):
+            case 5:
                 Progression.progress();
                 break;
-            case (6):
+            case 6:
                 Prime.primeNumber();
                 break;
             default:
@@ -81,7 +82,7 @@ public class Engine {
     public static void rightResult() {
         System.out.println("Correct!");
         round++;
-        if (round == 3) {
+        if (round == getMaxround()) {
             System.out.println("Congratulations, " + userName + "!");
         }
     }

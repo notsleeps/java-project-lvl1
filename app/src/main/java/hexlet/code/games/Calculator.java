@@ -1,12 +1,20 @@
 package hexlet.code.games;
-import static hexlet.code.Engine.*;
+import static hexlet.code.Engine.greeting;
+import static hexlet.code.Engine.randomNumber100;
+import static hexlet.code.Engine.rightResult;
+import static hexlet.code.Engine.getScanner;
+import static hexlet.code.Engine.getMaxround;
+import static hexlet.code.Engine.getResult;
+import static hexlet.code.Engine.setResult;
+import static hexlet.code.Engine.setUserResult;
+import static hexlet.code.Engine.getUserResult;
+import static hexlet.code.Engine.wrongResultInt;
 
 public class Calculator {
 
     public static void calc() {
         greeting();
         System.out.println("What is the result of the expression?");
-
         for (int i = 0; i < getMaxround(); i++) {
             int num1 = randomNumber100();
             int num2 = randomNumber100();

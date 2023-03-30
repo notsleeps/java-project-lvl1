@@ -1,10 +1,18 @@
 package hexlet.code.games;
-import static hexlet.code.Engine.*;
+import static hexlet.code.Engine.greeting;
+import static hexlet.code.Engine.randomNumber100;
+import static hexlet.code.Engine.wrongResultStringNo;
+import static hexlet.code.Engine.wrongResultStringYes;
+import static hexlet.code.Engine.setUserAnswer;
+import static hexlet.code.Engine.getUserAnswer;
+import static hexlet.code.Engine.rightResult;
+import static hexlet.code.Engine.getScanner;
+import static hexlet.code.Engine.getMaxround;
 public class Prime {
     public static void primeNumber() {
         greeting();
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < getMaxround(); i++) {
             int num = randomNumber100();
             boolean b = true;
             System.out.println("Question: " + num);

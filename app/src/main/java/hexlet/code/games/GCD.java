@@ -1,5 +1,4 @@
 package hexlet.code.games;
-
 import static hexlet.code.Engine.getMaxround;
 import static hexlet.code.Engine.greeting;
 import static hexlet.code.Engine.randomNumber100;

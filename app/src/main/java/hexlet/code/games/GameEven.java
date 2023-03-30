@@ -1,15 +1,21 @@
 package hexlet.code.games;
-import hexlet.code.Engine;
+import static hexlet.code.Engine.greeting;
+import static hexlet.code.Engine.randomNumber100;
+import static hexlet.code.Engine.wrongResultStringNo;
+import static hexlet.code.Engine.wrongResultStringYes;
+import static hexlet.code.Engine.setUserAnswer;
+import static hexlet.code.Engine.getUserAnswer;
+import static hexlet.code.Engine.rightResult;
+import static hexlet.code.Engine.getScanner;
+import static hexlet.code.Engine.getMaxround;
 
-import static hexlet.code.Engine.*;
 
 public class GameEven {
     public static void even() {
         String yes = "yes";
         String no = "no";
-        Engine.greeting();
+        greeting();
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-
         for (int i = 0; i < getMaxround(); i++) {
             int num = randomNumber100();
             System.out.println("Question: " + num);
@@ -25,9 +31,4 @@ public class GameEven {
             }
         }
     }
-
-    public static void main(String[] args) {
-        GameEven.even();
-    }
-
 }
