@@ -102,14 +102,14 @@ public class Engine {
     }
 
     public static int randomNumber100() {
-        int randomNumberFrom_2 = 2;
-        int randomNumberTo_100 = 100;
-        return randomNumberFrom_2 + (int) (Math.random() * randomNumberTo_100);
+        final int randomNumberFrom2 = 2;
+        final int randomNumberTo100 = 100;
+        return randomNumberFrom2 + (int) (Math.random() * randomNumberTo100);
     }
     public static int randomNumber10() {
-        int randomNumberFrom_1 = 1;
-        int randomNumberTo_10 = 10;
-        return randomNumberFrom_1 + (int) (Math.random() * randomNumberTo_10);
+        final int randomNumberFrom1 = 1;
+        final int randomNumberTo10 = 10;
+        return randomNumberFrom1 + (int) (Math.random() * randomNumberTo10);
     }
 }
 

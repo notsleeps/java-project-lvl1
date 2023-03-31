@@ -15,7 +15,7 @@ public class Prime {
         for (int i = 0; i < getMaxround(); i++) {
             int num = randomNumber100();
             boolean b = true;
-            int maxDivisor = 20;
+            final int maxDivisor = 20;
             System.out.println("Question: " + num);
             setUserAnswer(getScanner().next());
             for (int j = 2; j < maxDivisor; j++) {
