@@ -18,7 +18,7 @@ public class Calculator {
         for (int i = 0; i < getMaxround(); i++) {
             int num1 = randomNumber100();
             int num2 = randomNumber100();
-            int numberOfOperation = 3;
+            final int numberOfOperation = 3;
             int symbol = (int) (Math.random() * numberOfOperation);
             if (symbol == 0) {
                 setResult(num1 * num2);
