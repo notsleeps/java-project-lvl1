@@ -46,7 +46,7 @@ public class Engine {
     private static int round = 0;
 
     public static int getMaxround() {
-        int maxround = 3;
+       final int maxround = 3;
         return maxround;
     }
 
