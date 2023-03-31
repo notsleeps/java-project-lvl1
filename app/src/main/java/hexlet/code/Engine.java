@@ -50,32 +50,24 @@ public class Engine {
         return maxround;
     }
 
+    private static final int GREETING = 1;
+    private static final int PARITY = 2;
+    private static final int GAMECALCULATOR = 3;
+    private static final int GAMEGCD = 4;
+    private static final int GAMEPROGRESSION = 5;
+    private static final int GAMEPRIMENUMBER = 6;
+
 
     public static void menu(int num) {
-
         switch (num) {
-            case 0:
-                break;
-            case 1:
-                Cli.greeting();
-                break;
-            case 2:
-                GameEven.even();
-                break;
-            case 3:
-                Calculator.calc();
-                break;
-            case 4:
-                GCD.gcd();
-                break;
-            case 5:
-                Progression.progress();
-                break;
-            case 6:
-                Prime.primeNumber();
-                break;
-            default:
-                break;
+            case GREETING -> Cli.greeting();
+            case PARITY -> GameEven.even();
+            case GAMECALCULATOR -> Calculator.calc();
+            case GAMEGCD -> GCD.gcd();
+            case GAMEPROGRESSION -> Progression.progress();
+            case GAMEPRIMENUMBER -> Prime.primeNumber();
+            default -> {
+            }
         }
     }
 
@@ -110,10 +102,14 @@ public class Engine {
     }
 
     public static int randomNumber100() {
-        return 2 + (int) (Math.random() * 100);
+        int randomNumberFrom_2 = 2;
+        int randomNumberTo_100 = 100;
+        return randomNumberFrom_2 + (int) (Math.random() * randomNumberTo_100);
     }
     public static int randomNumber10() {
-        return 1 + (int) (Math.random() * 10);
+        int randomNumberFrom_1 = 1;
+        int randomNumberTo_10 = 10;
+        return randomNumberFrom_1 + (int) (Math.random() * randomNumberTo_10);
     }
 }
 

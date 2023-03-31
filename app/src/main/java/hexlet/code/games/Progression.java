@@ -18,8 +18,9 @@ public class Progression {
             int initialNum = randomNumber10();
             int stepProgression = randomNumber10();
             int hiddenNumber = randomNumber10();
+            int progressionLength = 11;
             System.out.print("Question: ");
-            for (int j = 1; j < 11; j++) {
+            for (int j = 1; j < progressionLength; j++) {
                 initialNum = initialNum + stepProgression;
                 if (j != hiddenNumber) {
                     System.out.print(initialNum + " ");

@@ -15,9 +15,10 @@ public class Prime {
         for (int i = 0; i < getMaxround(); i++) {
             int num = randomNumber100();
             boolean b = true;
+            int maxDivisor = 20;
             System.out.println("Question: " + num);
             setUserAnswer(getScanner().next());
-            for (int j = 2; j < 20; j++) {
+            for (int j = 2; j < maxDivisor; j++) {
                 if (j == num) {
                     j++;
                 }
@@ -36,9 +37,5 @@ public class Prime {
                 break;
             }
         }
-    }
-
-    public static void main(String[] args) {
-        Prime.primeNumber();
     }
 }
