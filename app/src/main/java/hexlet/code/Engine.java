@@ -174,7 +174,7 @@ public class Engine {
         for (int i = 0; i < getMaxround(); i++) {
             int initialNum = a1;
             int stepProgression = b1;
-            final int hiddenNumber = 1 + Engine.randomNumber10();
+            final int hiddenNumber = Engine.randomNumber10();
             final int progressionLength = 11;
             System.out.print("Question: ");
             for (int j = 1; j < progressionLength; j++) {
