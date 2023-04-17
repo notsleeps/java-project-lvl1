@@ -21,17 +21,17 @@ public class Calculator {
             int symbol = (int) (Math.random() * numberOfOperation);
             if (symbol == 0) {
                 int result = num1 * num2;
-                queANDans[i][0] = num1 + "*" + num2;
+                queANDans[i][0] = num1 + " * " + num2;
                 queANDans[i][1] = String.valueOf(result);
 
             } else if (symbol == 1) {
                 int result = num1 - num2;
-                queANDans[i][0] = num1 + "-" + num2;
+                queANDans[i][0] = num1 + " - " + num2;
                 queANDans[i][1] = String.valueOf(result);
 
             } else {
                 int result = num1 + num2;
-                queANDans[i][0] = num1 + "+" + num2;
+                queANDans[i][0] = num1 + " + " + num2;
                 queANDans[i][1] = String.valueOf(result);
             }
             if (i == 0) {
