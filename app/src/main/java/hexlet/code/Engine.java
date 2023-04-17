@@ -17,7 +17,6 @@ public class Engine {
     public static final String NO = "no";
     public static final int MAXROUND = 3;
     private static int round = 0;
-    public static String[][] queANDans = {{null, null}, {null, null}, {null, null}};
 
     public static void run(String[][] array, String str) {
         greeting();

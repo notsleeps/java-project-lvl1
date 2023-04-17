@@ -10,12 +10,12 @@ public class Prime {
     private static final int QUESTION2 = 1 + Engine.randomNumber100();
     private static final int QUESTION3 = 1 + Engine.randomNumber100();
     static final String EXERCISE = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-    public static String[][] queANDans = {{null, null}, {null, null}, {null, null}};
+    private static String[][] questionanswer = {{null, null}, {null, null}, {null, null}};
 
     public static void primeNumberPlay() {
         for (int i = 0; i < MAXROUND; i++) {
             int num = question1;
-            queANDans[i][0] = String.valueOf(num);
+            questionanswer[i][0] = String.valueOf(num);
             boolean b = true;
             final int maxDivisor = 20;
             for (int j = 2; j < maxDivisor; j++) {
@@ -28,9 +28,9 @@ public class Prime {
                 }
             }
             if (b) {
-                queANDans[i][1] = YES;
+                questionanswer[i][1] = YES;
             } else {
-                queANDans[i][1] = NO;
+                questionanswer[i][1] = NO;
             }
             if (i == 0) {
                 question1 = QUESTION2;
@@ -38,6 +38,6 @@ public class Prime {
                 question1 = QUESTION3;
             }
         }
-        run(queANDans, EXERCISE);
+        run(questionanswer, EXERCISE);
     }
 }

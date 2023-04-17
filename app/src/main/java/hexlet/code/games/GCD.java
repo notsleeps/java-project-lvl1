@@ -1,7 +1,6 @@
 package hexlet.code.games;
 import static hexlet.code.Engine.run;
 import static hexlet.code.Engine.MAXROUND;
-import static hexlet.code.Engine.queANDans;
 import hexlet.code.Engine;
 
 public class GCD {
@@ -12,16 +11,17 @@ public class GCD {
     private static final int NUMBER_B2 = 1 + Engine.randomNumber100();
     private static final int NUMBER_B3 = 1 + Engine.randomNumber100();
     static final String EXERCISE = "Find the greatest common divisor of given numbers.";
+    private static String[][] questionanswer = {{null, null}, {null, null}, {null, null}};
 
     public static void gcdPlay() {
         for (int i = 0; i < MAXROUND; i++) {
             int num1 = numberA1;
             int num2 = numberB1;
             String result = num1 + " " + num2;
-            queANDans[i][0] = result;
+            questionanswer[i][0] = result;
             for (int j = num1; j > 0; j--) {
                 if (num1 % j == 0 & num2 % j == 0) {
-                    queANDans[i][1] = String.valueOf(j);
+                    questionanswer[i][1] = String.valueOf(j);
                     break;
                 }
             }
@@ -33,6 +33,6 @@ public class GCD {
                 numberB1 = NUMBER_B3;
             }
         }
-        run(queANDans, EXERCISE);
+        run(questionanswer, EXERCISE);
     }
 }

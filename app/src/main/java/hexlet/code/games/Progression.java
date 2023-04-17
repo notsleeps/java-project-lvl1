@@ -1,9 +1,7 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
-
 import static hexlet.code.Engine.MAXROUND;
 import static hexlet.code.Engine.run;
-import static hexlet.code.Engine.queANDans;
 
 public class Progression {
 
@@ -14,6 +12,7 @@ public class Progression {
     private static final int STEP2 = 1 + Engine.randomNumber10();
     private static final int STEP3 = 1 + Engine.randomNumber10();
     static final String EXERCISE = "What number is missing in the progression?";
+    private static String[][] questionanswer = {{null, null}, {null, null}, {null, null}};
 
     public static void progressionPlay() {
         for (int i = 0; i < MAXROUND; i++) {
@@ -29,11 +28,11 @@ public class Progression {
                     quest.append(initialNum).append(" ");
                 } else {
                     quest.append(".. ");
-                    queANDans[i][1] = String.valueOf(initialNum);
+                    questionanswer[i][1] = String.valueOf(initialNum);
                 }
             }
             result = quest.toString();
-            queANDans[i][0] = result;
+            questionanswer[i][0] = result;
             if (i == 0) {
                 initialvalue1 = INITIALVALUE2;
                 step1 = STEP2;
@@ -42,6 +41,6 @@ public class Progression {
                 step1 = STEP3;
             }
         }
-        run(queANDans, EXERCISE);
+        run(questionanswer, EXERCISE);
     }
 }
