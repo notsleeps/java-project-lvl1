@@ -1,13 +1,47 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
+
+import static hexlet.code.Engine.MAXROUND;
+import static hexlet.code.Engine.run;
+
 public class Progression {
-    private static final int A1 = Engine.randomNumber10();
-    private static final int B1 = Engine.randomNumber10();
-    private static final int A2 = Engine.randomNumber10();
-    private static final int B2 = Engine.randomNumber10();
-    private static final int A3 = Engine.randomNumber10();
-    private static final int B3 = Engine.randomNumber10();
-    public static void progress() {
-        Engine.progressionLogic(A1, B1, A2, B2, A3, B3);
+
+    private static int initialvalue1 = 1 + Engine.randomNumber10();
+    private static final int INITIALVALUE2 = 1 + Engine.randomNumber10();
+    private static final int INITIALVALUE3 = 1 + Engine.randomNumber10();
+    private static int step1 = 1 + Engine.randomNumber10();
+    private static final int STEP2 = 1 + Engine.randomNumber10();
+    private static final int STEP3 = 1 + Engine.randomNumber10();
+    static final String EXERCISE = "What number is missing in the progression?";
+    public static String[][] queANDans = {{null, null}, {null, null}, {null, null}};
+
+    public static void progressionPlay() {
+        for (int i = 0; i < MAXROUND; i++) {
+            int initialNum = initialvalue1;
+            int stepProgression = step1;
+            final int hiddenNumber = Engine.randomNumber10();
+            final int progressionLength = 11;
+            String result;
+            StringBuilder quest = new StringBuilder();
+            for (int j = 1; j < progressionLength; j++) {
+                initialNum = initialNum + stepProgression;
+                if (j != hiddenNumber) {
+                    quest.append(initialNum).append(" ");
+                } else {
+                    quest.append(".. ");
+                    queANDans[i][1] = String.valueOf(initialNum);
+                }
+            }
+            result = quest.toString();
+            queANDans[i][0] = result;
+            if (i == 0) {
+                initialvalue1 = INITIALVALUE2;
+                step1 = STEP2;
+            } else {
+                initialvalue1 = INITIALVALUE3;
+                step1 = STEP3;
+            }
+        }
+        run(queANDans, EXERCISE);
     }
 }

@@ -1,33 +1,20 @@
 package hexlet.code.games;
+import hexlet.code.Engine;
 import static hexlet.code.Engine.run;
 import static hexlet.code.Engine.MAXROUND;
 import static hexlet.code.Engine.YES;
 import static hexlet.code.Engine.NO;
-import hexlet.code.Engine;
-
-public class Prime {
-    private static int question1 = 1 + Engine.randomNumber100();
+public class Even {
+    public static String[][] queANDans = {{null, null}, {null, null}, {null, null}};
+    static final String EXERCISE = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+    private static  int question1 = 1 + Engine.randomNumber100();
     private static final int QUESTION2 = 1 + Engine.randomNumber100();
     private static final int QUESTION3 = 1 + Engine.randomNumber100();
-    static final String EXERCISE = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-    public static String[][] queANDans = {{null, null}, {null, null}, {null, null}};
-
-    public static void primeNumberPlay() {
+    public static void evenPlay() {
         for (int i = 0; i < MAXROUND; i++) {
             int num = question1;
             queANDans[i][0] = String.valueOf(num);
-            boolean b = true;
-            final int maxDivisor = 20;
-            for (int j = 2; j < maxDivisor; j++) {
-                if (j == num) {
-                    j++;
-                }
-                if (num % j == 0) {
-                    b = false;
-                    break;
-                }
-            }
-            if (b) {
+            if (num % 2 == 0) {
                 queANDans[i][1] = YES;
             } else {
                 queANDans[i][1] = NO;
