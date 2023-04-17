@@ -4,9 +4,10 @@ import hexlet.code.games.Even;
 import hexlet.code.games.Calculator;
 import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
-import static hexlet.code.Engine.scanner;
+import java.util.Scanner;
 
 public class Menu {
+    private static final Scanner SCANNER = new Scanner(System.in);
     static final int EXIT = 0;
     static final int GREETING = 1;
     static final int PARITY = 2;
@@ -27,7 +28,7 @@ public class Menu {
                 6 - Prime
                 0 - Exit""");
 
-        int num = Integer.parseInt(scanner.next());
+        int num = Integer.parseInt(SCANNER.next());
         switch (num) {
             case EXIT -> System.exit(0);
             case GREETING -> Cli.greeting();

@@ -4,8 +4,8 @@ import static hexlet.code.Engine.run;
 import static hexlet.code.Engine.MAXROUND;
 import static hexlet.code.Engine.YES;
 import static hexlet.code.Engine.NO;
+import static hexlet.code.Engine.queANDans;
 public class Even {
-    public static String[][] queANDans = {{null, null}, {null, null}, {null, null}};
     static final String EXERCISE = "Answer 'yes' if the number is even, otherwise answer 'no'.";
     private static  int question1 = 1 + Engine.randomNumber100();
     private static final int QUESTION2 = 1 + Engine.randomNumber100();

@@ -2,6 +2,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import static hexlet.code.Engine.MAXROUND;
 import static hexlet.code.Engine.run;
+import static hexlet.code.Engine.queANDans;
 
 public class Calculator {
     private static int numberA1 = 1 + Engine.randomNumber10();
@@ -10,7 +11,6 @@ public class Calculator {
     private static int numberB1 = 1 + Engine.randomNumber100();
     private static final int NUMBER_B2 = 1 + Engine.randomNumber10();
     private static final int NUMBER_B3 = 1 + Engine.randomNumber10();
-    public static String[][] queANDans = {{null, null}, {null, null}, {null, null}};
 
     static final String EXERCISE = "What is the result of the expression?";
     public static void calcPlay() {

@@ -1,7 +1,7 @@
 package hexlet.code;
 import java.util.Scanner;
 public class Engine {
-    public static  Scanner scanner = new Scanner(System.in);
+    private static  Scanner scanner = new Scanner(System.in);
     public static int randomNumber100() {
         final int randomNumberFrom2 = 2;
         final int randomNumberTo100 = 100;
@@ -17,6 +17,7 @@ public class Engine {
     public static final String NO = "no";
     public static final int MAXROUND = 3;
     private static int round = 0;
+    public static String[][] queANDans = {{null, null}, {null, null}, {null, null}};
 
     public static void run(String[][] array, String str) {
         greeting();
