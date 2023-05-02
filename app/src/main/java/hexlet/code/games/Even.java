@@ -10,7 +10,9 @@ public class Even {
         return  (number % 2 == 0);
     }
     public static void play() {
-        String[][] gameData = new String[3][2];
+        final int arrayDepth = 2;
+        final int arrayWidth = 3;
+        String[][] gameData = new String[arrayWidth][arrayDepth];
         for (int i = 0; i < MAXROUND; i++) {
             int question = 1 + Utils.randomNumber100();
             gameData[i][0] = String.valueOf(question);

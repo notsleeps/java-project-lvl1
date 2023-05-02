@@ -17,7 +17,9 @@ public class GCD {
     }
 
     public static void play() {
-        String[][] gameData = new String[3][2];
+        final int arrayDepth = 2;
+        final int arrayWidth = 3;
+        String[][] gameData = new String[arrayWidth][arrayDepth];
         for (int i = 0; i < MAXROUND; i++) {
             int numberA = 1 + Utils.randomNumber100();
             int numberB = 1 + Utils.randomNumber100();
