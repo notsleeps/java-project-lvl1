@@ -1,38 +1,30 @@
 package hexlet.code.games;
 import static hexlet.code.Engine.run;
 import static hexlet.code.Engine.MAXROUND;
-import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class GCD {
-    private static int numberA1 = 1 + Engine.randomNumber100();
-    private static final int NUMBER_A2 = 1 + Engine.randomNumber100();
-    private static final int NUMBER_A3 = 1 + Engine.randomNumber100();
-    private static int numberB1 = 1 + Engine.randomNumber100();
-    private static final int NUMBER_B2 = 1 + Engine.randomNumber100();
-    private static final int NUMBER_B3 = 1 + Engine.randomNumber100();
-    static final String EXERCISE = "Find the greatest common divisor of given numbers.";
-    private static String[][] questionanswer = {{null, null}, {null, null}, {null, null}};
-
-    public static void gcdPlay() {
-        for (int i = 0; i < MAXROUND; i++) {
-            int num1 = numberA1;
-            int num2 = numberB1;
-            String result = num1 + " " + num2;
-            questionanswer[i][0] = result;
-            for (int j = num1; j > 0; j--) {
-                if (num1 % j == 0 & num2 % j == 0) {
-                    questionanswer[i][1] = String.valueOf(j);
-                    break;
-                }
-            }
-            if (i == 0) {
-                numberA1 = NUMBER_A2;
-                numberB1 = NUMBER_B2;
-            } else {
-                numberA1 = NUMBER_A3;
-                numberB1 = NUMBER_B3;
+    private static final String TASK = "Find the greatest common divisor of given numbers.";
+    public static int gcdLogic(int number1, int number2) {
+        int result = 0;
+        for (int j = number1; j > 0; j--) {
+            if (number1 % j == 0 & number2 % j == 0) {
+                result = j;
+                break;
             }
         }
-        run(questionanswer, EXERCISE);
+        return result;
+    }
+
+    public static void play() {
+        String[][] gameData = new String[3][2];
+        for (int i = 0; i < MAXROUND; i++) {
+            int numberA = 1 + Utils.randomNumber100();
+            int numberB = 1 + Utils.randomNumber100();
+            String result = numberA + " " + numberB;
+            gameData[i][0] = result;
+            gameData[i][1] = String.valueOf(gcdLogic(numberA, numberB));
+        }
+        run(gameData, TASK);
     }
 }

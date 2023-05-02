@@ -32,11 +32,11 @@ public class Menu {
         switch (num) {
             case EXIT -> System.exit(0);
             case GREETING -> Cli.greeting();
-            case PARITY -> Even.evenPlay();
-            case CALC -> Calculator.calcPlay();
-            case GCD1 -> GCD.gcdPlay();
-            case PROGRESSION -> Progression.progressionPlay();
-            case PRIMENUMBER -> Prime.primeNumberPlay();
+            case PARITY -> Even.play();
+            case CALC -> Calculator.play();
+            case GCD1 -> GCD.play();
+            case PROGRESSION -> Progression.play();
+            case PRIMENUMBER -> Prime.play();
             default -> {
             }
         }
