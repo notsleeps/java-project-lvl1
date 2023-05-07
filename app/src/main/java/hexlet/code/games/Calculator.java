@@ -1,8 +1,8 @@
 package hexlet.code.games;
 import hexlet.code.Utils;
 
-import static hexlet.code.Engine.MAXROUND;
 import static hexlet.code.Engine.run;
+import static hexlet.code.Engine.MAXROUND;
 
 public class Calculator {
     private static final String TASK = "What is the result of the expression?";
