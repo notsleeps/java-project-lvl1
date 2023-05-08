@@ -9,19 +9,19 @@ public class Engine {
     public static final int MAXROUND = 3;
     private static int round = 0;
 
-    public static void run(String[][] array, String str) {
+    public static void run(String[][] data, String task) {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
         Engine.userName = Engine.scanner.next();
         System.out.println("Hello, " + userName + "!");
 
-        System.out.println(str);
+        System.out.println(task);
         for (int i = 0; i < MAXROUND; i++) {
-            String correctAnswer = array[i][1];
-            System.out.println("Question: " + array[i][0]);
+            String correctAnswer = data[i][1];
+            System.out.println("Question: " + data[i][0]);
             System.out.print("You answer: ");
             String userAnswer = scanner.next();
-            if (userAnswer.equals(array[i][1])) {
+            if (userAnswer.equals(data[i][1])) {
                 System.out.println("Correct!");
                 round++;
                 if (round == MAXROUND) {

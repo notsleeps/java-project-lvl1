@@ -5,7 +5,10 @@ import hexlet.code.Utils;
 
 public class GCD {
     private static final String TASK = "Find the greatest common divisor of given numbers.";
-    public static int gcdLogic(int number1, int number2) {
+    public static final int ARRAYDEPTH = 2;
+    public static final int ARRAYWIDTH = 3;
+
+    public static int divide(int number1, int number2) {
         int result = 0;
         for (int j = number1; j > 0; j--) {
             if (number1 % j == 0 & number2 % j == 0) {
@@ -17,15 +20,13 @@ public class GCD {
     }
 
     public static void play() {
-        final int arrayDepth = 2;
-        final int arrayWidth = 3;
-        String[][] gameData = new String[arrayWidth][arrayDepth];
+
+        String[][] gameData = new String[ARRAYWIDTH][ARRAYDEPTH];
         for (int i = 0; i < MAXROUND; i++) {
-            int numberA = 1 + Utils.randomNumber100();
-            int numberB = 1 + Utils.randomNumber100();
-            String result = numberA + " " + numberB;
-            gameData[i][0] = result;
-            gameData[i][1] = String.valueOf(gcdLogic(numberA, numberB));
+            int numberA = Utils.randomNumber100();
+            int numberB = Utils.randomNumber100();
+            gameData[i][0] = numberA + " " + numberB;
+            gameData[i][1] = String.valueOf(divide(numberA, numberB));
         }
         run(gameData, TASK);
     }
