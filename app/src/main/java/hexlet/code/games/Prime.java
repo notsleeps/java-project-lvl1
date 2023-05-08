@@ -11,7 +11,7 @@ public class Prime {
     public static final int ARRAYWIDTH = 3;
 
     public static boolean isPrime(int number) {
-        boolean b = true;
+        boolean testNumberIsPrime = true;
         final int maxDivisor = number - 1;
         if (maxDivisor < 1) {
             return false;
@@ -22,11 +22,11 @@ public class Prime {
                 j++;
             }
             if (number % j == 0) {
-                b = false;
+                testNumberIsPrime = false;
                 break;
             }
         }
-        return b;
+        return testNumberIsPrime;
     }
 
     public static void play() {
