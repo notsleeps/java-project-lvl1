@@ -12,15 +12,11 @@ public class Prime {
 
     public static boolean isPrime(int number) {
         boolean testNumberIsPrime = true;
-        final int maxDivisor = number - 1;
-        if (maxDivisor < 1) {
+        if (number <= 1) {
             return false;
         }
 
-        for (int j = 2; j < maxDivisor; j++) {
-            if (j == number) {
-                j++;
-            }
+        for (int j = 2; j < number; j++) {
             if (number % j == 0) {
                 testNumberIsPrime = false;
                 break;
