@@ -9,7 +9,7 @@ public class GCD {
     public static final int ARRAYWIDTH = 3;
 
     public static int divide(int number1, int number2) {
-        int result = 0;
+        int result = 1;
         for (int j = number1; j > 0; j--) {
             if (number1 % j == 0 & number2 % j == 0) {
                 result = j;
